@@ -24,7 +24,7 @@
         <!--Tab Bar Controller-->
         <scene sceneID="gE1-rs-lF7">
             <objects>
-                <tabBarController id="BAI-Yi-bTU" sceneMemberID="viewController">
+                <tabBarController id="BAI-Yi-bTU" customClass="TabBarController" customModule="ViewSizeChecker" customModuleProvider="target" sceneMemberID="viewController">
                     <nil key="simulatedBottomBarMetrics"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" id="aH5-RR-duO">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="49"/>

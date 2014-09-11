@@ -13,6 +13,7 @@
 		471D602C19BFC89000E79990 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 471D602B19BFC89000E79990 /* Images.xcassets */; };
 		471D602F19BFC89000E79990 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 471D602D19BFC89000E79990 /* LaunchScreen.xib */; };
 		471D603B19BFC89000E79990 /* ViewSizeCheckerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 471D603A19BFC89000E79990 /* ViewSizeCheckerTests.swift */; };
+		4748461619C144C700AC11DA /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4748461519C144C700AC11DA /* TabBarController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +37,7 @@
 		471D603419BFC89000E79990 /* ViewSizeCheckerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ViewSizeCheckerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		471D603919BFC89000E79990 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		471D603A19BFC89000E79990 /* ViewSizeCheckerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewSizeCheckerTests.swift; sourceTree = "<group>"; };
+		4748461519C144C700AC11DA /* TabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,11 +80,12 @@
 			isa = PBXGroup;
 			children = (
 				471D602419BFC89000E79990 /* AppDelegate.swift */,
-				471D602619BFC89000E79990 /* ViewController.swift */,
-				471D602819BFC89000E79990 /* Main.storyboard */,
 				471D602B19BFC89000E79990 /* Images.xcassets */,
 				471D602D19BFC89000E79990 /* LaunchScreen.xib */,
+				471D602819BFC89000E79990 /* Main.storyboard */,
 				471D602219BFC89000E79990 /* Supporting Files */,
+				4748461519C144C700AC11DA /* TabBarController.swift */,
+				471D602619BFC89000E79990 /* ViewController.swift */,
 			);
 			path = ViewSizeChecker;
 			sourceTree = "<group>";
@@ -213,6 +216,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				471D602719BFC89000E79990 /* ViewController.swift in Sources */,
+				4748461619C144C700AC11DA /* TabBarController.swift in Sources */,
 				471D602519BFC89000E79990 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

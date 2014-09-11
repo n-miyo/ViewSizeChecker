@@ -21,9 +21,6 @@ class ViewController: UITableViewController {
         updateValues()
     }
 
-    override func supportedInterfaceOrientations() -> Int {
-        return Int(UIInterfaceOrientationMask.All.toRaw())
-    }
 
     // MARK: Private
 
