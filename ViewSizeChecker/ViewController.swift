@@ -7,7 +7,10 @@ class ViewController: UITableViewController {
     @IBOutlet weak var scaleValue: UILabel!
     @IBOutlet weak var horizontalValue: UILabel!
     @IBOutlet weak var verticalValue: UILabel!
-    @IBOutlet weak var screenValue: UILabel!
+    @IBOutlet weak var screenScaleValue: UILabel!
+    @IBOutlet weak var screenNativeScaleValue: UILabel!
+    @IBOutlet weak var screenBoundsValue: UILabel!
+    @IBOutlet weak var screenNativeBoundsValue: UILabel!
     @IBOutlet weak var navigationBarValue: UILabel!
     @IBOutlet weak var tabBarValue: UILabel!
 
@@ -25,22 +28,22 @@ class ViewController: UITableViewController {
     // MARK: Private
 
     private func updateValues() {
-        var s: NSString
         let tc = self.view.traitCollection
         scaleValue.text = "\(tc.displayScale)"
         horizontalValue.text = "\(tc.horizontalSizeClass)"
         verticalValue.text = "\(tc.verticalSizeClass)"
 
-        s = NSStringFromCGSize(UIScreen.mainScreen().bounds.size)
-        screenValue.text = s
+        let ms = UIScreen.mainScreen()
+        screenScaleValue.text = "\(ms.scale)"
+        screenNativeScaleValue.text = "\(ms.nativeScale)"
+        screenBoundsValue.text = NSStringFromCGSize(ms.bounds.size)
+        screenNativeBoundsValue.text = NSStringFromCGSize(ms.nativeBounds.size)
 
         let n = self.navigationController!.navigationBar
-        s = NSStringFromCGSize(n.frame.size)
-        navigationBarValue.text = s
+        navigationBarValue.text = NSStringFromCGSize(n.frame.size)
 
         let t = self.tabBarController!.tabBar
-        s = NSStringFromCGSize(t.frame.size)
-        tabBarValue.text = s
+        tabBarValue.text = NSStringFromCGSize(t.frame.size)
     }
 }
 

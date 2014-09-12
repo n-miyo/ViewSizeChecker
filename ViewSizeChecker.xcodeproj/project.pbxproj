@@ -7,11 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		407D65FC19C2B72A004A0FD6 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 407D65FA19C2B72A004A0FD6 /* LaunchScreen.xib */; };
 		471D602519BFC89000E79990 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 471D602419BFC89000E79990 /* AppDelegate.swift */; };
 		471D602719BFC89000E79990 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 471D602619BFC89000E79990 /* ViewController.swift */; };
 		471D602A19BFC89000E79990 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 471D602819BFC89000E79990 /* Main.storyboard */; };
 		471D602C19BFC89000E79990 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 471D602B19BFC89000E79990 /* Images.xcassets */; };
-		471D602F19BFC89000E79990 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 471D602D19BFC89000E79990 /* LaunchScreen.xib */; };
 		471D603B19BFC89000E79990 /* ViewSizeCheckerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 471D603A19BFC89000E79990 /* ViewSizeCheckerTests.swift */; };
 		4748461619C144C700AC11DA /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4748461519C144C700AC11DA /* TabBarController.swift */; };
 /* End PBXBuildFile section */
@@ -27,13 +27,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		407D65FB19C2B72A004A0FD6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = ViewSizeChecker/Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		471D601F19BFC89000E79990 /* ViewSizeChecker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ViewSizeChecker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		471D602319BFC89000E79990 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		471D602419BFC89000E79990 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		471D602619BFC89000E79990 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		471D602919BFC89000E79990 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		471D602B19BFC89000E79990 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		471D602E19BFC89000E79990 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		471D603419BFC89000E79990 /* ViewSizeCheckerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ViewSizeCheckerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		471D603919BFC89000E79990 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		471D603A19BFC89000E79990 /* ViewSizeCheckerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewSizeCheckerTests.swift; sourceTree = "<group>"; };
@@ -79,9 +79,9 @@
 		471D602119BFC89000E79990 /* ViewSizeChecker */ = {
 			isa = PBXGroup;
 			children = (
+				407D65FA19C2B72A004A0FD6 /* LaunchScreen.xib */,
 				471D602419BFC89000E79990 /* AppDelegate.swift */,
 				471D602B19BFC89000E79990 /* Images.xcassets */,
-				471D602D19BFC89000E79990 /* LaunchScreen.xib */,
 				471D602819BFC89000E79990 /* Main.storyboard */,
 				471D602219BFC89000E79990 /* Supporting Files */,
 				4748461519C144C700AC11DA /* TabBarController.swift */,
@@ -196,7 +196,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				471D602A19BFC89000E79990 /* Main.storyboard in Resources */,
-				471D602F19BFC89000E79990 /* LaunchScreen.xib in Resources */,
+				407D65FC19C2B72A004A0FD6 /* LaunchScreen.xib in Resources */,
 				471D602C19BFC89000E79990 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -240,20 +240,21 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		407D65FA19C2B72A004A0FD6 /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				407D65FB19C2B72A004A0FD6 /* Base */,
+			);
+			name = LaunchScreen.xib;
+			path = ..;
+			sourceTree = "<group>";
+		};
 		471D602819BFC89000E79990 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				471D602919BFC89000E79990 /* Base */,
 			);
 			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		471D602D19BFC89000E79990 /* LaunchScreen.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				471D602E19BFC89000E79990 /* Base */,
-			);
-			name = LaunchScreen.xib;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
