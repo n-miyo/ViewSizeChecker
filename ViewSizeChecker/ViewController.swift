@@ -47,10 +47,10 @@ class ViewController: UITableViewController {
         screenBoundsValue.text = NSStringFromCGSize(ms.bounds.size)
         screenNativeBoundsValue.text = NSStringFromCGSize(ms.nativeBounds.size)
 
-        let n = self.navigationController!.navigationBar
+        let n = navigationController!.navigationBar
         navigationBarValue.text = NSStringFromCGSize(n.frame.size)
 
-        let t = self.tabBarController!.tabBar
+        let t = tabBarController!.tabBar
         tabBarValue.text = NSStringFromCGSize(t.frame.size)
     }
 }
