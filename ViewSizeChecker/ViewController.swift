@@ -19,11 +19,19 @@ class ViewController: UITableViewController {
         updateValues()
     }
 
-    override func traitCollectionDidChange(
-        previousTraitCollection: UITraitCollection) {
-        updateValues()
+    override func viewWillTransitionToSize(
+      size: CGSize,
+      withTransitionCoordinator coordinator:
+        UIViewControllerTransitionCoordinator) {
+        super.viewWillTransitionToSize(
+          size, withTransitionCoordinator:coordinator)
+        coordinator.animateAlongsideTransition(
+          nil,
+          completion: {
+            context in
+            self.updateValues()
+        })
     }
-
 
     // MARK: Private
 
