@@ -16,6 +16,7 @@ class ViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        navigationItem.title = sysctlByName("hw.machine")
         updateValues()
     }
 
@@ -52,6 +53,17 @@ class ViewController: UITableViewController {
 
         let t = tabBarController!.tabBar
         tabBarValue.text = NSStringFromCGSize(t.frame.size)
+    }
+
+    func sysctlByName(name: String) -> String {
+        return name.withCString {
+            cs in
+            var s: UInt = 0
+            sysctlbyname(cs, nil, &s, nil, 0)
+            var v = [CChar](count: Int(s)/sizeof(CChar), repeatedValue: 0)
+            sysctlbyname(cs, &v, &s, nil, 0)
+            return String.fromCString(v)!
+        }
     }
 }
 
