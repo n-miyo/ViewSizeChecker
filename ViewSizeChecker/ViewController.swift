@@ -14,6 +14,7 @@ class ViewController: UITableViewController {
     @IBOutlet weak var navigationBarSizeLabel: UILabel!
     @IBOutlet weak var tabBarSizeLabel: UILabel!
 
+    var hwMachine: String!
     var displayScale: String!
     var horizontalSize: String!
     var verticalSize: String!
@@ -26,7 +27,7 @@ class ViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        navigationItem.title = sysctlByName("hw.machine")
+        hwMachine = sysctlByName("hw.machine")
         updateViews()
     }
 
@@ -44,10 +45,44 @@ class ViewController: UITableViewController {
         })
     }
 
+    @IBAction func pressedActionButton(sender: UIBarButtonItem) {
+        updateValues()
+        let a: [String] = [
+            "[\(hwMachine)]",
+            "",
+            "UITraitCollection:",
+            "  displayScale: \(displayScale)",
+            "  horizontalSize: \(horizontalSize)",
+            "  verticalSize: \(verticalSize)",
+            "",
+            "UIScreen:",
+            "  scale: \(screenScale)",
+            "  nativeScale: \(screenNativeScale)",
+            "  screenBounds: \(screenBounds)",
+            "  nativeBounds: \(screenNativeBounds)",
+            "",
+            "MISC:",
+            "  NavigationBar size: \(navigationBarSize)",
+            "  TabBar size: \(tabBarSize)"
+        ]
+        var s = ""
+        for x in a {
+            s += "\(x)\n"
+        }
+
+        let avc =
+          UIActivityViewController(activityItems:[s], applicationActivities:nil)
+        avc.popoverPresentationController?.barButtonItem = sender
+        navigationController!.presentViewController(
+          avc, animated:true, completion:nil)
+    }
+
     // MARK: Private
 
     private func updateViews() {
         updateValues()
+
+        navigationItem.title = hwMachine
 
         displayScaleLabel.text = displayScale
         horizontalSizeLabel.text = horizontalSize
