@@ -81,7 +81,7 @@ class ViewController: UITableViewController {
         tabBarSize = NSStringFromCGSize(t.frame.size)
     }
 
-    func sysctlByName(name: String) -> String {
+    private func sysctlByName(name: String) -> String {
         return name.withCString {
             cs in
             var s: UInt = 0
