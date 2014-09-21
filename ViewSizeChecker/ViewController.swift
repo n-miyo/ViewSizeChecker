@@ -80,3 +80,5 @@ extension UIUserInterfaceSizeClass: Printable {
         }
     }
 }
+
+// EOF
