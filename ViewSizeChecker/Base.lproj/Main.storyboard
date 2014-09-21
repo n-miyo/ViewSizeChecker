@@ -248,15 +248,15 @@
                     </tableView>
                     <navigationItem key="navigationItem" id="QxA-n6-DKX"/>
                     <connections>
-                        <outlet property="horizontalValue" destination="YHW-mz-xIG" id="Jyu-Cc-BOK"/>
-                        <outlet property="navigationBarValue" destination="t2C-MS-6qW" id="IML-za-ofd"/>
-                        <outlet property="scaleValue" destination="tYt-TW-ogB" id="52T-cd-UP9"/>
-                        <outlet property="screenBoundsValue" destination="km4-Hc-74W" id="VgL-T2-nN6"/>
-                        <outlet property="screenNativeBoundsValue" destination="6i2-ks-hfa" id="rnR-Tj-ahh"/>
-                        <outlet property="screenNativeScaleValue" destination="g0K-jZ-naT" id="6Y7-Yq-ij2"/>
-                        <outlet property="screenScaleValue" destination="a6u-49-bTC" id="jDg-fM-nlf"/>
-                        <outlet property="tabBarValue" destination="OzP-sT-8ok" id="dEU-rO-K59"/>
-                        <outlet property="verticalValue" destination="LH5-XY-PCS" id="Lmb-nD-D7f"/>
+                        <outlet property="horizontalValueLabel" destination="YHW-mz-xIG" id="UTs-ti-SF7"/>
+                        <outlet property="navigationBarValueLabel" destination="t2C-MS-6qW" id="ab5-Ca-kA2"/>
+                        <outlet property="scaleValueLabel" destination="tYt-TW-ogB" id="Uak-VD-hqY"/>
+                        <outlet property="screenBoundsValueLabel" destination="km4-Hc-74W" id="ioq-i8-jjq"/>
+                        <outlet property="screenNativeBoundsValueLabel" destination="6i2-ks-hfa" id="fPp-Pt-OZx"/>
+                        <outlet property="screenNativescaleValueLabel" destination="g0K-jZ-naT" id="ODN-oO-vyx"/>
+                        <outlet property="screenscaleValueLabel" destination="a6u-49-bTC" id="bVy-cs-Sv7"/>
+                        <outlet property="tabBarValueLabel" destination="OzP-sT-8ok" id="BMI-vV-F2I"/>
+                        <outlet property="verticalValueLabel" destination="LH5-XY-PCS" id="fo4-rf-fvu"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="N2b-Va-0Pe" userLabel="First Responder" sceneMemberID="firstResponder"/>

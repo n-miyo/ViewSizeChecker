@@ -4,15 +4,15 @@ import UIKit
 
 class ViewController: UITableViewController {
 
-    @IBOutlet weak var scaleValue: UILabel!
-    @IBOutlet weak var horizontalValue: UILabel!
-    @IBOutlet weak var verticalValue: UILabel!
-    @IBOutlet weak var screenScaleValue: UILabel!
-    @IBOutlet weak var screenNativeScaleValue: UILabel!
-    @IBOutlet weak var screenBoundsValue: UILabel!
-    @IBOutlet weak var screenNativeBoundsValue: UILabel!
-    @IBOutlet weak var navigationBarValue: UILabel!
-    @IBOutlet weak var tabBarValue: UILabel!
+    @IBOutlet weak var scaleValueLabel: UILabel!
+    @IBOutlet weak var horizontalValueLabel: UILabel!
+    @IBOutlet weak var verticalValueLabel: UILabel!
+    @IBOutlet weak var screenscaleValueLabel: UILabel!
+    @IBOutlet weak var screenNativescaleValueLabel: UILabel!
+    @IBOutlet weak var screenBoundsValueLabel: UILabel!
+    @IBOutlet weak var screenNativeBoundsValueLabel: UILabel!
+    @IBOutlet weak var navigationBarValueLabel: UILabel!
+    @IBOutlet weak var tabBarValueLabel: UILabel!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -38,21 +38,22 @@ class ViewController: UITableViewController {
 
     private func updateValues() {
         let tc = self.view.traitCollection
-        scaleValue.text = "\(tc.displayScale)"
-        horizontalValue.text = "\(tc.horizontalSizeClass)"
-        verticalValue.text = "\(tc.verticalSizeClass)"
+        scaleValueLabel.text = "\(tc.displayScale)"
+        horizontalValueLabel.text = "\(tc.horizontalSizeClass)"
+        verticalValueLabel.text = "\(tc.verticalSizeClass)"
 
         let ms = UIScreen.mainScreen()
-        screenScaleValue.text = "\(ms.scale)"
-        screenNativeScaleValue.text = "\(ms.nativeScale)"
-        screenBoundsValue.text = NSStringFromCGSize(ms.bounds.size)
-        screenNativeBoundsValue.text = NSStringFromCGSize(ms.nativeBounds.size)
+        screenscaleValueLabel.text = "\(ms.scale)"
+        screenNativescaleValueLabel.text = "\(ms.nativeScale)"
+        screenBoundsValueLabel.text = NSStringFromCGSize(ms.bounds.size)
+        screenNativeBoundsValueLabel.text =
+          NSStringFromCGSize(ms.nativeBounds.size)
 
         let n = navigationController!.navigationBar
-        navigationBarValue.text = NSStringFromCGSize(n.frame.size)
+        navigationBarValueLabel.text = NSStringFromCGSize(n.frame.size)
 
         let t = tabBarController!.tabBar
-        tabBarValue.text = NSStringFromCGSize(t.frame.size)
+        tabBarValueLabel.text = NSStringFromCGSize(t.frame.size)
     }
 
     func sysctlByName(name: String) -> String {
