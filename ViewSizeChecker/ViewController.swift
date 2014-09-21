@@ -4,15 +4,15 @@ import UIKit
 
 class ViewController: UITableViewController {
 
-    @IBOutlet weak var scaleValueLabel: UILabel!
-    @IBOutlet weak var horizontalValueLabel: UILabel!
-    @IBOutlet weak var verticalValueLabel: UILabel!
-    @IBOutlet weak var screenscaleValueLabel: UILabel!
-    @IBOutlet weak var screenNativescaleValueLabel: UILabel!
-    @IBOutlet weak var screenBoundsValueLabel: UILabel!
-    @IBOutlet weak var screenNativeBoundsValueLabel: UILabel!
-    @IBOutlet weak var navigationBarValueLabel: UILabel!
-    @IBOutlet weak var tabBarValueLabel: UILabel!
+    @IBOutlet weak var displayScaleLabel: UILabel!
+    @IBOutlet weak var horizontalSizeLabel: UILabel!
+    @IBOutlet weak var verticalSizeLabel: UILabel!
+    @IBOutlet weak var screenScaleLabel: UILabel!
+    @IBOutlet weak var screenNativeScaleLabel: UILabel!
+    @IBOutlet weak var screenBoundsLabel: UILabel!
+    @IBOutlet weak var screenNativeBoundsLabel: UILabel!
+    @IBOutlet weak var navigationBarSizeLabel: UILabel!
+    @IBOutlet weak var tabBarSizeLabel: UILabel!
 
     var displayScale: String!
     var horizontalSize: String!
@@ -21,8 +21,8 @@ class ViewController: UITableViewController {
     var screenNativeScale: String!
     var screenBounds: String!
     var screenNativeBounds: String!
-    var navigationBarFrame: String!
-    var tabBarFrame: String!
+    var navigationBarSize: String!
+    var tabBarSize: String!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -49,17 +49,17 @@ class ViewController: UITableViewController {
     private func updateViews() {
         updateValues()
 
-        scaleValueLabel.text = displayScale
-        horizontalValueLabel.text = horizontalSize
-        verticalValueLabel.text = verticalSize
+        displayScaleLabel.text = displayScale
+        horizontalSizeLabel.text = horizontalSize
+        verticalSizeLabel.text = verticalSize
 
-        screenscaleValueLabel.text = screenScale
-        screenNativescaleValueLabel.text = screenNativeScale
-        screenBoundsValueLabel.text = screenBounds
-        screenNativeBoundsValueLabel.text = screenNativeBounds
+        screenScaleLabel.text = screenScale
+        screenNativeScaleLabel.text = screenNativeScale
+        screenBoundsLabel.text = screenBounds
+        screenNativeBoundsLabel.text = screenNativeBounds
 
-        navigationBarValueLabel.text = navigationBarFrame
-        tabBarValueLabel.text = tabBarFrame
+        navigationBarSizeLabel.text = navigationBarSize
+        tabBarSizeLabel.text = tabBarSize
     }
 
     private func updateValues() {
@@ -75,10 +75,10 @@ class ViewController: UITableViewController {
         screenNativeBounds = NSStringFromCGSize(ms.nativeBounds.size)
 
         let n = navigationController!.navigationBar
-        navigationBarFrame = NSStringFromCGSize(n.frame.size)
+        navigationBarSize = NSStringFromCGSize(n.frame.size)
 
         let t = tabBarController!.tabBar
-        tabBarFrame = NSStringFromCGSize(t.frame.size)
+        tabBarSize = NSStringFromCGSize(t.frame.size)
     }
 
     func sysctlByName(name: String) -> String {
